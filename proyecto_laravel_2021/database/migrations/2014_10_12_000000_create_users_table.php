@@ -24,7 +24,8 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->string("apellido")->nullable(false);
             $table->enum("Deportista, Técnico, Médico, Fisioterapeuts");
-            $table->date("Fecha de inicio);
+            $table->date("Fecha de inicio");
+        });
     }
 
     /**
@@ -36,4 +37,6 @@ class CreateUsersTable extends Migration
     {
         Schema::dropIfExists('users');
     }
-}
+        }
+
+
